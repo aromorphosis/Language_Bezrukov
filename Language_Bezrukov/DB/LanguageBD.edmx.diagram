@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="34c190a8a0dc440dbcd2692c80d535bf" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="Model.Client" Width="1.5" PointX="0.75" PointY="7.125" />
+        <EntityTypeShape EntityType="Model.ClientService" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="Model.ClientServiceDocument" Width="1.5" PointX="5.25" PointY="3" />
+        <EntityTypeShape EntityType="Model.Gender" Width="1.5" PointX="1.5" PointY="12" />
+        <EntityTypeShape EntityType="Model.Service" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="Model.ServicePhoto" Width="1.5" PointX="3" PointY="6.625" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model.Tag" Width="1.5" PointX="3" PointY="15" />
+        <EntityTypeShape EntityType="Model.ClientList" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.vw_ClientDetails" Width="1.5" PointX="7.75" PointY="5.75" />
+        <AssociationConnector Association="Model.FK_Client_Gender" />
+        <AssociationConnector Association="Model.FK_ClientService_Client" />
+        <AssociationConnector Association="Model.FK_ClientService_Service" />
+        <AssociationConnector Association="Model.FK_ClientServiceDocument_ClientService" />
+        <AssociationConnector Association="Model.FK_ServicePhoto_Service" />
+        <AssociationConnector Association="Model.TagClient" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
