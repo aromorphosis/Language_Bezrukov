@@ -1,11 +1,11 @@
-﻿<Window x:Class="Language_Bezrukov.AddClients"
+﻿<Window x:Class="Language_Bezrukov.RefClient"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Language_Bezrukov"
         mc:Ignorable="d"
-        Title="Школа иностранных языков" Height="650" Width="800">
+       Title="Школа иностранных языков" Height="650" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.6*"/>
@@ -23,34 +23,11 @@
         <StackPanel Orientation="Horizontal"
                     Margin="10">
             <Image Source="/Images/school_logo.png"/>
-            <TextBlock Text="Страница добавления нового клиента"
+            <TextBlock Text="Окно редактирования существущих клиентов"
                        VerticalAlignment="Center"
                        Margin="10 0"
                        FontSize="20"
                        FontFamily="Comic Sans MS"/>
-
-
-            <TextBlock
-                Text="Редактировать уже существующих клиентов:"
-                Height="30"
-                Width="200"
-                Margin="20 0 10 10"
-                TextWrapping="Wrap" 
-                TextAlignment="Center"
-                />
-
-            <Button      
-                       x:Name="BtnRefCl"
-                       VerticalAlignment="Center"
-                       Margin="0 0"
-                       FontSize="20"
-                       FontFamily="Comic Sans MS"
-                       Width="100"
-                       Height="30"
-                       Background="#FF04A0FF"
-                       Content="Ред."
-                       Click="BtnRefCl_Click"
-                       />
         </StackPanel>
 
         <StackPanel Grid.Row="1"
@@ -85,13 +62,11 @@
                 FontFamily="Comic Sans MS"
                 />
             <TextBox
-                x:Name="LastName"
                 HorizontalAlignment="Center"
                 Height="40"
                 Width="250"
                 FontSize="20"
                 FontFamily="Comic Sans MS"
-                TextChanged="LastName_TextChanged"
                 />
         </StackPanel>
 
@@ -107,13 +82,11 @@
                 FontFamily="Comic Sans MS"
                 />
             <TextBox
-                x:Name="FirstName"
                 HorizontalAlignment="Center"
                 Height="40"
                 Width="250"
                 FontSize="20"
                 FontFamily="Comic Sans MS"
-                TextChanged="FirstName_TextChanged"
                 />
         </StackPanel>
 
@@ -129,13 +102,11 @@
                 FontFamily="Comic Sans MS"
                 />
             <TextBox
-                x:Name="Patronymic"
                 HorizontalAlignment="Center"
                 Height="40"
                 Width="250"
                 FontSize="20"
                 FontFamily="Comic Sans MS"
-                TextChanged="Patronymic_TextChanged"
                 />
         </StackPanel>
 
@@ -151,13 +122,11 @@
                 FontFamily="Comic Sans MS"
                 />
             <TextBox
-                x:Name="Birthday"
                 HorizontalAlignment="Center"
                 Height="40"
                 Width="250"
                 FontSize="20"
                 FontFamily="Comic Sans MS"
-                TextChanged="Birthday_TextChanged"
                 />
         </StackPanel>
 
@@ -173,13 +142,11 @@
                 FontFamily="Comic Sans MS"
                 />
             <TextBox
-                x:Name="NumberPhone"
                 HorizontalAlignment="Center"
                 Height="40"
                 Width="250"
                 FontSize="20"
                 FontFamily="Comic Sans MS"
-                TextChanged="NumberPhone_TextChanged"
                 />
         </StackPanel>
 
@@ -195,13 +162,11 @@
                 FontFamily="Comic Sans MS"
                 />
             <TextBox
-                x:Name="Email"
                 HorizontalAlignment="Center"
                 Height="40"
                 Width="250"
                 FontSize="20"
                 FontFamily="Comic Sans MS"
-                TextChanged="Email_TextChanged"
                 />
         </StackPanel>
 
@@ -220,8 +185,7 @@
                        Content="Назад"
                        Click="BtnBack_Click"
                        />
-            <Button    
-                       x:Name="BntAdd"
+            <Button      
                        VerticalAlignment="Center"
                        Margin="10 0"
                        FontSize="20"
@@ -229,12 +193,11 @@
                        Width="190"
                        Height="30"
                        Background="#FF04A0FF"
-                       Content="Добавить клиента?"
-                       Click="BntAdd_Click"
+                       Content="Изменить данные?"
                        />
         </StackPanel>
 
-        
-        
+
+
     </Grid>
 </Window>

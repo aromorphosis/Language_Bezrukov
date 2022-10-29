@@ -25,6 +25,10 @@ namespace Language_Bezrukov
     {
         List<DB.Client> ListClient = new List<DB.Client>();
 
+        int numberPage = 0;
+        int countClient;
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -43,6 +47,15 @@ namespace Language_Bezrukov
                 "Количеству посещений(от большего к меньшему)"
             };
             CBSortFilter.SelectedIndex = 0;
+
+            CmbPage.ItemsSource = new List<string>
+            {
+                "Все",
+                "10",
+                "50",
+                "200",
+            };
+            CmbPage.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -90,8 +103,31 @@ namespace Language_Bezrukov
                 list = list.Where(i => i.Birthday.Month == DateTime.Now.Month).ToList();
             }
 
-
             AllInformation.ItemsSource = list;
+            //Постраничный метод
+            switch (CmbPage.SelectedIndex)
+            {
+                case 0: 
+                    AllInformation.ItemsSource = list.ToList();
+                    break;
+
+                case 1: 
+                    AllInformation.ItemsSource = list.Skip(numberPage * 10).Take(10).ToList();
+                    break;
+
+                case 2:
+                    AllInformation.ItemsSource = list.Skip(numberPage * 50).Take(50).ToList();
+                    break;
+
+                case 3:
+                    AllInformation.ItemsSource = list.Skip(numberPage * 200).Take(200).ToList();
+                    break;
+
+                default:
+                    AllInformation.ItemsSource = list.ToList();
+                    break;
+            }
+
         }
 
         private void CBFilterGender_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -155,6 +191,11 @@ namespace Language_Bezrukov
             AddClients addClients = new AddClients();
             addClients.ShowDialog();
             this.Close();
+        }
+
+        private void CmbPage_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Filter();
         }
     }
 }

@@ -96,8 +96,8 @@
                 <GridView>
                     <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"/>
                     <GridViewColumn Header="Пол" DisplayMemberBinding="{Binding Gender.GenderName}"/>
-                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding FirstName}"/>
                     <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding Patronymic}"/>
                     <GridViewColumn Header="Дата рождения" DisplayMemberBinding="{Binding Birthday}"/>
                     <GridViewColumn Header="Номер телефона" DisplayMemberBinding="{Binding NumberPhone}"/>
@@ -162,8 +162,14 @@
                        FontSize="14"
                        FontFamily="Comic Sans MS"/>
             
-            <ComboBox Width="80"
-                      Height="30"/>
+            <ComboBox x:Name="CmbPage"
+                      Width="80"
+                      Height="30"
+                      FontSize="20"
+                      FontFamily="Comic Sans MS"
+                      VerticalContentAlignment="Center"
+                      HorizontalContentAlignment="Center"
+                      SelectionChanged="CmbPage_SelectionChanged"/>
             
             <Button  VerticalAlignment="Center"
                        Margin="20 0"
